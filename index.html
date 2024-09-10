@@ -4,63 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meredith Beal</title>
-  <!-- Linking SwiperJS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Evenia:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Papyrus&family=Euvenia&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#">Meredith Beal</a></div>
+      <div class="logo"><a href="#">CodingLab</a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
-          <span class="logo-name">Meredith Beal</span>
+          <span class="logo-name">CodingLab</span>
           <i class='bx bx-x' ></i>
         </div>
         <ul class="links">
           <li><a href="#">HOME</a></li>
-          <li><a href="#">EDUCATION</a></li>
-          <li><a href="#">MBTV</a></li>
           <li>
-            <a href="#">CONSULTING</a>
+            <a href="#">HTML & CSS</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Login Forms</a></li>
+              <li><a href="#">Card Design</a></li>
               <li class="more">
-                <span><a href="#">TECH</a>
+                <span><a href="#">More</a>
                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
               </span>
                 <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">Cybersecurity</a></li>
-                  <li><a href="#">AI & Blockhain</a></li>
-                </ul>
-              </li>
-              <li class="more">
-                <span><a href="#">DIPLOMACY</a>
-                <i class='bx bxs-chevron-right arrow more-arrow'></i>
-              </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">CONSULAR SERVICES</a></li>
-                  <li><a href="#">SECRETARIAT</a></li>
+                  <li><a href="#">Neumorphism</a></li>
+                  <li><a href="#">Pre-loader</a></li>
+                  <li><a href="#">Glassmorphism</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a href="#">WRITINGS</a></li>
           <li>
-            <a href="#">MORE</a>
+            <a href="#">JAVASCRIPT</a>
             <i class='bx bxs-chevron-down js-arrow arrow '></i>
             <ul class="js-sub-menu sub-menu">
-              <li><a href="#">NEWS</a></li>
-              <li><a href="#">PEACEWORK</a></li>
-              <li><a href="#">MUSIC</a></li>
-              <li><a href="#">BROADCASTING</a></li>
-              <li><a href="#">GALLERY</a></li>
-              <li><a href="#">STORE</a></li>
+              <li><a href="#">Dynamic Clock</a></li>
+              <li><a href="#">Form Validation</a></li>
+              <li><a href="#">Card Slider</a></li>
+              <li><a href="#">Complete Website</a></li>
             </ul>
           </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">CONTACT US</a></li>
         </ul>
       </div>
       <div class="search-box">
@@ -72,46 +67,86 @@
     </div>
   </nav>
     
-  <div class="container swiper">
-    <h1 class="coronation-heading">Coronation</h1>
-    
-    <!-- Swiper slider wrapper -->
-    <div class="slider-wrapper">
-      <div class="card-list swiper-wrapper">
-        <div class="card-item swiper-slide">
-          <img src="pic/coronation1.jpeg" alt="" class="user-image">
+    <!-- Top Section: Image Slider -->
+  <section class="top-section">
+    <div class="image-container swiper">
+      <h1 class="container-header">CORONATION</h1>
+      
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img src="images/coronation1.jpeg" alt="" class="responsive-img">
         </div>
-  
-        <div class="card-item swiper-slide">
-          <img src="pic/coronation2.jpg" alt="" class="user-image">
+        <div class="swiper-slide card">
+          <img src="images/coronation2.jpg" alt="" class="responsive-img">
         </div>
-  
-        <div class="card-item swiper-slide">
-          <img src="pic/coronation3.jpeg" alt="" class="user-image">
+        <div class="swiper-slide card">
+          <img src="images/coronation3.jpeg" alt="" class="responsive-img">
         </div>
       </div>
-  
-      <!-- Swiper buttons and pagination -->
+
+      <!-- Pagination and navigation buttons for mobile swiping -->
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-  
-    <!-- General Description Card -->
-    <div class="description-card">
-      <!-- <h2 class="description-title">About the Coronation</h2> -->
-      <p class="description-text">
+  </section>
+
+  <!-- Description Section -->
+  <section class="description-section">
+    <div class="mdescription-card">
+      <p class="mdescription-text">
         The coronation of these historical figures marks significant moments in history. From political shifts to cultural symbolism, these events are etched in time.
       </p>
       <a href="#" class="read-more-link">Read More</a>
     </div>
-  </div>
-  
-    <!-- Books -->
-     
-  
+  </section>
 
-  <!-- Linking SwiperJS script -->
+  <!-- Additional Sections can be added here -->
+  <!-- Example: Another Section -->
+      <!-- Top Section: Image Slider -->
+<section class="top-section">
+  <div class="image-container swiper">
+    <h1 class="container-header">BOOKS</h1>
+    
+    <div class="swiper-wrapper">
+      <div class="swiper-slide card">
+        <a href="buy-now-link1.html" class="buy-now-link">
+          <img src="huh/Panel22.jpg" alt="Image 1" class="responsive-img">
+          <span class="buy-now-text">Buy Now</span>
+        </a>
+      </div>
+
+      <div class="swiper-slide card">
+        <a href="buy-now-link3.html" class="buy-now-link">
+          <img src="huh/Panel22.jpg" alt="Image 3" class="responsive-img">
+          <span class="buy-now-text">Buy Now</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Pagination and navigation buttons for mobile swiping -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<div class="gallery-container">
+  <div class="gallery-row">
+    <div class="gallery-item"><img src="images/Header-MB Pointing at Mountains.jpeg" alt=""></div>
+    <div class="gallery-item"><img src="images/coronation1.jpeg" alt=""></div>
+    <div class="gallery-item"><img src="images/coronation2.jpg" alt=""></div>
+    <div class="gallery-item"><img src="images/coronation3.jpeg" alt=""></div>
+    <div class="gallery-item"><img src="images/coronation1.jpeg" alt=""></div>
+  </div>
+  <div class="pagination">
+    <button onclick="prevPage()">Prev</button>
+    <button onclick="nextPage()">Next</button>
+  </div>
+</div>
+
+
+  <!-- SwiperJS script -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- Linking custom script -->
