@@ -1,91 +1,11 @@
 /* Importing Google Font - Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
+/* Basic resets and layout settings */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: url("images/bg.jpg") #030728 no-repeat center;
-}
-
-.slider-wrapper {
-  overflow: hidden;
-  max-width: 1200px;
-  margin: 0 70px 55px;
-}
-
-main {
-    margin-top: 140px; /* Adjust this value to avoid the card touching the nav bar */
-    padding-bottom: 20px; /* Adjust to ensure space between the card and the footer */
-  }
-  
-  /* If the card is within a container */
-  .card-container {
-    margin-top: 50px; /* Add margin to prevent it from touching elements at the bottom */
-  }
-  
-
-.card-list .card-item {
-  height: auto;
-  color: #fff;
-  user-select: none;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  backdrop-filter: blur(30px);
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.card-list .card-item .user-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-bottom: 0;
-  border: none;
-  padding: 0;
-}
-
-.slider-wrapper .swiper-pagination-bullet {
-  background: #fff;
-  height: 13px;
-  width: 13px;
-  opacity: 0.5;
-}
-
-.slider-wrapper .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.slider-wrapper .swiper-slide-button {
-  color: #fff;
-  margin-top: -55px;
-  transition: 0.2s ease;
-}
-
-.slider-wrapper .swiper-slide-button:hover {
-  color: #4658ff;
-}
-
-@media (max-width: 768px) {
-  .slider-wrapper {
-    margin: 0 10px 40px;
-  }
-
-  .slider-wrapper .swiper-slide-button {
-    display: none;
-  }
+  font-family: Arial, sans-serif;
 }
 
 nav{
@@ -381,151 +301,318 @@ nav .navbar .links li .sub-menu li{
 } 
 }
 
-
-            /* CARD */
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                /* background: #f2f2f2; */
-                padding: 20px;
-            }
-            .Mcard {
-                background: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                max-width: 800px; /* Increased width */
-                width: 100%;
-                margin: 0 auto;
-            }
-            .Mcard h2 {
-                font-size: 24px;
-                font-weight: 600;
-                color: #333;
-                margin-bottom: 15px;
-            }
-            .Mcard p {
-                font-size: 16px;
-                color: #555;
-                line-height: 1.5;
-                margin-bottom: 20px;
-            }
-            .Mcard a {
-                display: inline-block;
-                padding: 10px 20px;
-                background: #3E8DA8;
-                color: white;
-                border-radius: 4px;
-                text-decoration: none;
-                font-weight: 500;
-                transition: background 0.3s ease;
-            }
-            .Mcard a:hover {
-                background: #2d6e80;
-            }
-    
-            /* Responsive */
-            @media (max-width: 600px) {
-                .Mcard {
-                    padding: 15px;
-                    max-width: 100%; /* Full width on mobile */
-                }
-                .Mcard h2 {
-                    font-size: 20px;
-                }
-                .Mcard p {
-                    font-size: 14px;
-                }
-            }
-
-            .coronation-heading {
-              text-align: center;
-              font-size: 2rem;
-              margin-top: 80px;
-              margin-bottom: 30px; /* Adjust to create space between heading and cards */
-              font-family: Arial, sans-serif;
-              color: white;
-            }
-            
-            /* General container styling */
-.container {
-  position: relative;
+/* Ensure the image container has spacing around it */
+.image-container {
+  margin: 0 auto;
   padding: 20px;
-}
-
-/* Swiper slider */
-.slider-wrapper {
-  margin-bottom: 20px; /* Creates spacing between slider and description */
-  z-index: 2; /* Ensures slider stays on top if necessary */
-}
-
-.card-item {
-  max-width: 100%; /* Makes sure images are responsive */
-}
-
-/* Description card */
-.description-card {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1; /* Lower z-index so it stays behind the slider */
   position: relative;
+  max-width: 1200px; /* Adjust as needed */
 }
 
-/* Title styling */
-.description-title {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+/* Header Styles */
+.container-header {
+  font-size: 60px; /* Increase the font size for greater visibility */
+  font-weight: 800; /* Make the font bold */
+  text-align: center;
+  margin: 40px 0; /* Increase top and bottom margin for more spacing */
+  color: #000; /* Set a dark color for better contrast (optional) */
+  line-height: 1.2; /* Adjust line height for improved readability */
+  text-transform: uppercase; /* Make the text uppercase for emphasis (optional) */
 }
 
-/* Text styling */
-.description-text {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+/* Swiper Wrapper Styles */
+.swiper-wrapper {
+  display: flex;
+  align-items: center; /* Ensure alignment */
 }
 
-/* Read More link styling */
+/* Swiper Slide Styles */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Card Styles */
+.card {
+  width: 100%;
+  max-width: 100%; /* Ensure the card width adapts to its container */
+  height: auto; /* Set height to auto to maintain aspect ratio */
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto; /* Adjust height to auto to maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the card */
+}
+
+/* Swiper Navigation and Pagination Styles */
+.swiper-button-next, .swiper-button-prev {
+  color: #000; /* Customize arrow color */
+}
+
+.swiper-pagination-bullet {
+  background: #000; /* Customize pagination bullet color */
+}
+
+
+/* Description Card Styles */
+.mdescription-card {
+  background-color: #f9f9f9; /* Light background color for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Space inside the card */
+  margin: 20px auto; /* Centered with margin */
+  max-width: 800px; /* Maximum width */
+  text-align: center; /* Center align text */
+}
+
+.mdescription-text {
+  font-size: 16px; /* Text size */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space between text and link */
+}
+
 .read-more-link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-size: 16px; /* Same size as description text */
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
 }
 
 .read-more-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Ensure there's space above the top section */
+.top-section {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  padding-top: 80px; /* Add padding to the top to ensure space between nav and header */
+}
+
+/* Image container styles */
+.image-container {
+  position: relative;
+  padding: 20px;
+}
+
+.container-header {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
+  /* Additional spacing above header */
+  margin-top: 40px; /* Adjust this value if needed */
+}
+
+/* Swiper styles */
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for the cards */
+  height: 300px; /* Set a fixed height for uniformity */
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #000; /* Customize arrow color */
+}
+
+.swiper-pagination-bullet {
+  background: #000; /* Customize pagination bullet color */
+}
+
+/* Description Section Styles */
+.description-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.mdescription-card {
+  background-color: #f9f9f9; /* Light background color for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Space inside the card */
+  text-align: center; /* Center align text */
+}
+
+.mdescription-text {
+  font-family: 'Papyrus', sans-serif; /* Apply Euvenia font only to this text */
+  font-size: 18px; /* Increase text size for better visibility */
+  font-weight: 700; /* Make text bolder */
+  line-height: 1.6; /* Line height for readability */
+  margin-bottom: 20px; /* Space between text and link */
+  color: #333; /* Darker color for better contrast */
+  letter-spacing: 0.5px; /* Slightly increased letter spacing for better readability */
+}
+
+.read-more-link {
+  font-family: 'Euvenia', sans-serif; /* Use Papyrus for the "Read More" link */
+  font-size: 16px; /* Same size as description text */
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+}
+
+.read-more-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Style for the buy-now link */
+.buy-now-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.buy-now-text {
+  position: absolute;
+  bottom: 20px; /* Position it at the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center it horizontally */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  font-size: 18px; /* Font size for the "Buy Now" text */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.buy-now-text:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+
+.gallery-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pagination {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 10px;
+  margin: 5px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
   background-color: #0056b3;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .description-card {
-    padding: 15px;
+@media screen and (min-width: 768px) {
+  .gallery-row {
+    flex-wrap: nowrap;
+    overflow: visible; /* No horizontal scroll */
   }
 
-  .description-title {
-    font-size: 20px;
+  .gallery-item {
+    min-width: calc(100% / 5); /* Display all images in one row */
   }
 
-  .description-text {
-    font-size: 14px;
+  .pagination {
+    display: none; /* Hide pagination on larger screens */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pagination {
+    display: block; /* Show pagination on mobile */
   }
 
-  .read-more-link {
-    font-size: 14px;
-    padding: 8px 12px;
+  .gallery-row {
+    flex-wrap: nowrap;
+    overflow: hidden; /* Keep one image visible at a time */
   }
 }
