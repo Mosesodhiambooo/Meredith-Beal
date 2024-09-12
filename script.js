@@ -1,82 +1,3 @@
-
-// search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-// let searchBoxCancel = document.querySelector(".search-box .bx-x");
-
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
-});
-
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
-}
-
-
-var swiper = new Swiper('.swiper', {
-      slidesPerView: 1, /* Show 1 slide at a time on mobile */
-      spaceBetween: 10,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        // Show 3 slides at a time on larger devices
-        768: {
-          slidesPerView: 3,
-        }
-      }
-    });
-
-
-    let currentPage = 0;
-const itemsPerPage = 1; // Only one image per page on mobile view
-const galleryRow = document.querySelector('.gallery-row');
-const totalItems = document.querySelectorAll('.gallery-item').length;
-
-function updateGallery() {
-  const offset = currentPage * itemsPerPage * -100;
-  galleryRow.style.transform = `translateX(${offset}%)`;
-}
-
-function nextPage() {
-  if (currentPage < totalItems - 1) {
-    currentPage++;
-    updateGallery();
-  }
-}
-
-function prevPage() {
-  if (currentPage > 0) {
-    currentPage--;
-    updateGallery();
-  }
-}
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {
-    galleryRow.style.transform = 'none'; // Reset for larger screens
-  } else {
-    updateGallery();
-  }
-});
-
 const swiper = new Swiper('.slider-wrapper', {
   loop: true,
   grabCursor: true,
@@ -150,3 +71,70 @@ jsArrow.onclick = function() {
 }
 
 
+
+const toggleButton = document.getElementById('toggle-videos');
+const videos = document.querySelectorAll('.hidden-small-screen');
+
+toggleButton.addEventListener('click', () => {
+  if (toggleButton.innerText === 'Show More') {
+    videos.forEach(video => video.style.display = 'block');
+    toggleButton.innerText = 'Show Less';
+  } else {
+    videos.forEach(video => video.style.display = 'none');
+    toggleButton.innerText = 'Show More';
+  }
+});
+
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.thumbnail');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+  
+  slides.forEach((slide, i) => {
+    if (i === currentSlide) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function goToSlide(index) {
+  showSlide(index);
+}
+
+// Initial display
+showSlide(currentSlide);
+
+// Adjust carousel behavior based on screen size
+function adjustCarousel() {
+  if (window.innerWidth <= 768) {
+    // Enable pagination on mobile
+    showSlide(currentSlide);
+  } else {
+    // Disable pagination and show all images in a row for large screens
+    slides.forEach((slide) => {
+      slide.style.display = 'block';
+    });
+  }
+}
+
+window.addEventListener('resize', adjustCarousel);
+adjustCarousel();
