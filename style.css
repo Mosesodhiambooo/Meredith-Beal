@@ -616,3 +616,539 @@ nav .navbar .links li .sub-menu li{
     overflow: hidden; /* Keep one image visible at a time */
   }
 }
+
+
+/* Container */
+.container {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Header Title */
+.header-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Books Container */
+.books-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Book Card */
+.book-card {
+  width: 200px;
+  height: 320px;
+  border: 2px solid transparent; /* Transparent initially */
+  transition: border 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Background color for the card */
+}
+
+/* On hover, show black border */
+.book-card {
+  border: 2px solid black;
+}
+
+/* Book Card Images */
+.book-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures the entire image is visible */
+  border: 3px solid #ddd; /* Permanent border around the image */
+  background-color: #f0f0f0; /* Background color for the image */
+  border-radius: 5px;
+}
+
+/* Buy Button */
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Buy Button Hover Effect */
+.buy-btn:hover {
+  background-color: orange;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .book-card {
+      width: 150px;
+      height: 260px;
+  }
+
+  .buy-btn {
+      font-size: 0.85rem;
+      padding: 6px 10px;
+  }
+}
+
+
+/* Video Container */
+.video-container {
+  width: 100%;
+  max-width: 600px; /* Limit the max-width of the video container */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Video Heading */
+.video-heading {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Video Card */
+.video-card {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video Styling */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 500px) {
+  .video-heading {
+      font-size: 1.5rem;
+  }
+
+  .video-card {
+      padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .video-heading {
+      font-size: 1.2rem;
+  } 
+
+  .video-card {
+      padding: 6px;
+  }
+}
+
+/* News Container Wrapper */
+.news-container-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px; /* Ensure space on left and right edges */
+}
+
+/* News Heading */
+.news-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* News Container */
+.news-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the start of the container's cross axis */
+  width: 100%;
+  max-width: 100%; /* Ensure container spans full width */
+  padding: 0; /* No padding to ensure items touch edges */
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+}
+
+/* News Card */
+.news-card {
+  width: 100%;
+  max-width: 300px; /* Limit max-width for images and cards */
+  height: 400px; /* Set a fixed height for consistency */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.news-description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Twitter Feed */
+.twitter-feed {
+  width: 100%;
+  max-width: 300px; /* Match image card size */
+  height: 400px; /* Set same height as image card */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Adjust Twitter Timeline iframe */
+.twitter-timeline {
+  width: 100%;
+  height: 100%;
+}
+
+/* View All Link */
+.view-all-link {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .news-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0; /* No padding on smaller screens */
+  }
+
+  .news-card, .twitter-feed {
+      max-width: 100%;
+  }
+}
+
+    /* MBTV */
+    /* MBTV Heading */
+.mbtv-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* MBTV Container */
+.mbtv-container {
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* MBTV Videos Row */
+.mbtv-videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* MBTV Video Card */
+.mbtv-card {
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+}
+
+.mbtv-card video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Video Name */
+.video-name {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Show More / Show Less Button */
+.show-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  /* background-color: ; */
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hidden Class for Small Screens */
+.hidden-small-screen {
+  display: none;
+}
+
+/* Hidden Class for Large Screens */
+.hidden-large-screen {
+  display: none;
+}
+
+/* Media Queries for Larger Screens (No Show More/Show Less) */
+@media (min-width: 768px) {
+  .hidden-small-screen {
+    display: inline-block;
+  }
+
+  .show-more-btn {
+    display: none;
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 767px) {
+  .mbtv-card {
+    width: 100%;
+  }
+
+  .hidden-large-screen {
+    display: inline-block;
+  }
+}
+
+
+/* General Styles */
+.abtmeredith {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.profile-section, .downloads-section, .images-section {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: orangered;
+}
+
+/* Profile Section */
+.profile-content {
+  text-align: center; /* Center text and elements inside profile */
+  position: relative;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Heading */
+.profile-content h1 {
+  margin: 0; /* Remove default margin */
+  padding-bottom: 10px; /* Space between heading and button */
+}
+
+/* View Profile Button */
+.view-profile {
+  display: inline-block; /* Ensures button doesn't take up full width */
+  color: blue;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-align: center;
+  position: absolute; /* Allows positioning at the bottom */
+  bottom: 0; /* Position at the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+}
+
+
+
+
+/* Downloads Section */
+.downloads-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.downloads-links {
+  display: flex;
+  flex-direction: column; /* Arrange links in a column */
+  text-align: center;
+}
+
+.download-link {
+  margin: 10px 0;
+  text-decoration: none;
+  color: orangered;
+  font-size: 1.2rem;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* Images Section */
+.images-section h2 {
+  text-align: center;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.thumbnail {
+  flex: 1 1 calc(33.33% - 20px);
+  margin: 10px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Carousel Controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination-button:hover {
+  background: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 769px) {
+  .abtmeredith {
+    flex-direction: row;
+  }
+
+  /* Arrange thumbnails in 3 columns, 2 per row */
+  .thumbnail-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .thumbnail {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+  }
+
+  .carousel-control, .pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .abtmeredith {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .downloads-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin: 0;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
