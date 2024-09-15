@@ -160,19 +160,7 @@ nav .navbar .links li:hover .js-sub-menu{
   top: -6px;
   transform: rotate(45deg);
 }
-.search-box .input-box input{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  height: 35px;
-  width: 280px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 16px;
-  border: none;
-}
+
 .navbar .nav-links .sidebar-logo{
   display: none;
 }
@@ -301,39 +289,7 @@ nav .navbar .links li .sub-menu li{
 } 
 }
 
-/* Ensure the image container has spacing around it */
-.image-container {
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  max-width: 1200px; /* Adjust as needed */
-}
 
-/* Header Styles */
-.container-header {
-  font-size: 60px; /* Increase the font size for greater visibility */
-  font-weight: 800; /* Make the font bold */
-  text-align: center;
-  margin: 40px 0; /* Increase top and bottom margin for more spacing */
-  color: #000; /* Set a dark color for better contrast (optional) */
-  line-height: 1.2; /* Adjust line height for improved readability */
-  text-transform: uppercase; /* Make the text uppercase for emphasis (optional) */
-}
-
-/* Swiper Wrapper Styles */
-.swiper-wrapper {
-  display: flex;
-  align-items: center; /* Ensure alignment */
-}
-
-/* Swiper Slide Styles */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 
 /* Card Styles */
 .card {
@@ -346,22 +302,6 @@ nav .navbar .links li .sub-menu li{
   align-items: center;
   justify-content: center;
 }
-
-.card img {
-  width: 100%;
-  height: auto; /* Adjust height to auto to maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the card */
-}
-
-/* Swiper Navigation and Pagination Styles */
-.swiper-button-next, .swiper-button-prev {
-  color: #000; /* Customize arrow color */
-}
-
-.swiper-pagination-bullet {
-  background: #000; /* Customize pagination bullet color */
-}
-
 
 /* Description Card Styles */
 .mdescription-card {
@@ -397,65 +337,6 @@ nav .navbar .links li .sub-menu li{
     max-width: 100%;
     height: auto;
   }
-}
-
-/* Ensure there's space above the top section */
-.top-section {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
-  padding-top: 80px; /* Add padding to the top to ensure space between nav and header */
-}
-
-/* Image container styles */
-.image-container {
-  position: relative;
-  padding: 20px;
-}
-
-.container-header {
-  font-size: 24px;
-  text-align: center;
-  margin: 20px 0;
-  /* Additional spacing above header */
-  margin-top: 40px; /* Adjust this value if needed */
-}
-
-/* Swiper styles */
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.card {
-  width: 100%;
-  max-width: 400px; /* Set a maximum width for the cards */
-  height: 300px; /* Set a fixed height for uniformity */
-  box-sizing: border-box;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: #000; /* Customize arrow color */
-}
-
-.swiper-pagination-bullet {
-  background: #000; /* Customize pagination bullet color */
 }
 
 /* Description Section Styles */
@@ -572,50 +453,7 @@ nav .navbar .links li .sub-menu li{
   display: block;
 }
 
-.pagination {
-  display: none;
-  text-align: center;
-  margin-top: 10px;
-}
 
-.pagination button {
-  padding: 10px;
-  margin: 5px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.pagination button:hover {
-  background-color: #0056b3;
-}
-
-@media screen and (min-width: 768px) {
-  .gallery-row {
-    flex-wrap: nowrap;
-    overflow: visible; /* No horizontal scroll */
-  }
-
-  .gallery-item {
-    min-width: calc(100% / 5); /* Display all images in one row */
-  }
-
-  .pagination {
-    display: none; /* Hide pagination on larger screens */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .pagination {
-    display: block; /* Show pagination on mobile */
-  }
-
-  .gallery-row {
-    flex-wrap: nowrap;
-    overflow: hidden; /* Keep one image visible at a time */
-  }
-}
 
 
 /* Container */
@@ -1152,3 +990,88 @@ video {
     margin-top: 10px;
   }
 }
+
+/* Center the Coronation heading */
+        .coronation-heading {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px; /* Adds some spacing below the heading */
+        }
+
+        /* Container styling */
+        .bealcoronation img {
+            object-fit: contain; /* Ensure that images fit within the box without covering content */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ensure that the cards are of the same size */
+        .card {
+            height: 300px;
+            width: 100%; /* Full width within column */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-img-top {
+            height: 70%; /* Ensure that the image takes up 70% of the card height */
+            width: 100%;
+            object-fit: contain; /* Avoid image stretching */
+        }
+
+        .card-body {
+            height: 30%; /* Ensure that the card body takes up 30% of the card height */
+        }
+
+        /* For larger screens, show the image cards in a row */
+        @media (min-width: 768px) {
+            .carousel {
+                display: none; /* Hide carousel on larger screens */
+            }
+            .image-row {
+                display: flex;
+            }
+        }
+
+        /* For smaller screens, hide the image row and show the carousel */
+        @media (max-width: 767.98px) {
+            .image-row {
+                display: none; /* Hide image row on small screens */
+            }
+            /* Ensure carousel images are of consistent height */
+            .carousel-item img {
+                height: 300px;
+                width: 100%;
+                object-fit: contain; /* Ensure images fit and maintain aspect ratio */
+            }
+        }
+
+        /* Modern dot style for carousel indicators */
+        .carousel-indicators {
+            position: relative; /* Adjust position to be relative */
+            bottom: -15px; /* Move the indicators below the images */
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            background-color: #333; /* Modern dark color for dots */
+            border-radius: 50%; /* Make them circular */
+            margin: 0 5px;
+            opacity: 0.5; /* Light opacity for inactive state */
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-indicators [data-bs-target].active {
+            opacity: 1; /* Full opacity for active dot */
+            background-color: #007bff; /* Use a highlight color for active dot, e.g., Bootstrap blue */
+        }
+
+        /* Ensure the carousel is spaced properly */
+        .carousel {
+            padding-bottom: 30px; /* Adds spacing below the carousel */
+        }
