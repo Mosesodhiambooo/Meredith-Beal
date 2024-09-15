@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Evenia:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Papyrus&family=Euvenia&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
@@ -17,16 +18,16 @@
   <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#">Meredith Beal</a></div>
+      <div class="logo"><a href="mbtv.html">Meredith Beal</a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name">Meredith Beal</span>
           <i class='bx bx-x' ></i>
         </div>
         <ul class="links">
-          <li><a href="#">HOME</a></li>
+          <li><a href="index.html">HOME</a></li>
           <li><a href="#">EDUCATION</a></li>
-          <li><a href="#">MBTV</a></li>
+          <li><a href="mbtv.html">MBTV</a></li>
           <li>
             <a href="#">CONSULTING</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
@@ -56,7 +57,7 @@
             <a href="#">MORE</a>
             <i class='bx bxs-chevron-down js-arrow arrow '></i>
             <ul class="js-sub-menu sub-menu">
-              <li><a href="#">NEWS</a></li>
+              <li><a href="#news">NEWS</a></li>
               <li><a href="#">PEACEWORK</a></li>
               <li><a href="#">MUSIC</a></li>
               <li><a href="#">BROADCASTING</a></li>
@@ -66,38 +67,67 @@
           </li>
         </ul>
       </div>
-      <div class="search-box">
-        <i class='bx bx-search'></i>
-        <div class="input-box">
-          <input type="text" placeholder="Search...">
-        </div>
-      </div>
     </div>
   </nav>
     
-    <!-- Top Section: Image Slider -->
-  <section class="top-section">
-    <div class="image-container swiper">
-      <h1 class="container-header">CORONATION</h1>
-      
-      <div class="swiper-wrapper">
-        <div class="swiper-slide card">
-          <img src="images/coronation1.jpeg" alt="" class="responsive-img">
-        </div>
-        <div class="swiper-slide card">
-          <img src="images/coronation2.jpg" alt="" class="responsive-img">
-        </div>
-        <div class="swiper-slide card">
-          <img src="images/coronation3.jpeg" alt="" class="responsive-img">
-        </div>
-      </div>
+  <div class="container bealcoronation mt-5">
+    <!-- Coronation Heading -->
+    <h1 class="coronation-heading">Coronation</h1>
 
-      <!-- Pagination and navigation buttons for mobile swiping -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <!-- Image cards in a row for larger screens -->
+    <div class="image-row row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="huh/coronation1.jpeg" class="card-img-top" alt="">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="huh/coronation2.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="huh/coronation3.jpeg" class="card-img-top" alt="">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+
+    <!-- Carousel for smaller screens -->
+    <div id="bealcoronationCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="huh/coronation1.jpeg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="huh/coronation2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="huh/coronation3.jpeg" class="d-block w-100" alt="">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modern Dot Indicators below the carousel -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#bealcoronationCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#bealcoronationCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#bealcoronationCarousel" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Description Section -->
   <section class="description-section">
@@ -106,7 +136,7 @@
         On the 27th & 28th of April 2024, Meredith  Clayton Beal was appointed as Senior Paramount Chief of the Bakholokoe Kingdom by his
         Royal Majesty King Letsitsa II
       </p>
-      <a href="#" class="read-more-link">Read More</a>
+      <a href="huh/Panel-4-doc 1-2024 Peace Proposal Synopsis-Official (1).pdf" class="read-more-link">Read More</a>
     </div>
   </section>
 
@@ -148,10 +178,10 @@
     </div>
 </div>
 
-
+       
 <div class="news-container-wrapper">
   <h2 class="news-heading">New & Blogs</h2>
-  <div class="news-container">
+  <div class="news-container" id="news">
     <div class="news-card">
       <img src="images/Panel-5-image 1-Commonwealth.jpg" alt="Image 1">
       <p class="news-description">Description for the first image goes here. Explain what the image is about.</p>
@@ -190,7 +220,7 @@
 </div>
 
 
-<div class="mbtv-container">
+<div class="mbtv-container" id="mbtv">
   <!-- Heading at the top center -->
   <h2 class="mbtv-heading">MBTV</h2>
 
