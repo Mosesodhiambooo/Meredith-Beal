@@ -18,7 +18,7 @@
   <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="mbtv.html">Meredith Beal</a></div>
+      <div class="logo"><a href="index.html">Meredith Beal</a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name">Meredith Beal</span>
@@ -61,7 +61,7 @@
               <li><a href="#">PEACEWORK</a></li>
               <li><a href="#">MUSIC</a></li>
               <li><a href="#">BROADCASTING</a></li>
-              <li><a href="#">GALLERY</a></li>
+              <li><a href="Gallery.html">GALLERY</a></li>
               <li><a href="#">MB STORE</a></li>
             </ul>
           </li>
@@ -140,23 +140,28 @@
     </div>
   </section>
 
-  <!-- Additional Sections can be added here -->
-  <!-- Example: Another Section -->
-      <!-- Top Section: Image Slider -->
-      <div class="container">
-        <h1 class="header-title">Books</h1>
-        <div class="books-container">
-            <div class="book-card">
-                <img src="huh/Panel22.jpg" alt="">
-                <a href="#" class="buy-btn">Get your copy</a>
-            </div>
-            <div class="book-card">
-                <img src="huh/Panel22b.jpg" alt="">
-                <a href="#" class="buy-btn">Get your copy</a>
-            </div>
+  <div class="container">
+    <h1 class="heading">Books</h1>
+    <div class="bealboks">
+      <div class="bealcard first-card">
+        <img src="huh/Panel22.jpg" alt="">
+      </div>
+      <div class="bealcard with-description">
+        <div class="description top">
+          <p><b>Meredith's New Book</b></p>
+          <p class="special-text">Victory Moment to Moment</p>
+          <p><b>is now available on Amazon worldwide as well as your favorite book sellers.</b></p>
+          <a href="">Take a peak</a>
         </div>
+        <img src="huh/Panel22b.jpg" alt="">
+        <div class="description bottom">
+          <a href="">Visit Virtual gallery</a>
+        </div>
+      </div>
     </div>
-
+    <a href="shop.html" class="grab-button">Get your copy</a>
+  </div>
+  
     <div class="video-container">
       <h1 class="video-heading">GLOBAL ADVENTURE</h1>
       <div class="video-card">
@@ -166,17 +171,36 @@
       </div>
   </div>
 
-  <div class="container">
-    <h1 class="header-title">PEACE PROPOSAL</h1>
-    <div class="books-container">
-        <div class="book-card">
-            <img src="huh/Panel-4-image 2-2024 PP Cover.png" alt="">
-        </div>
-        <div class="book-card">
-            <img src="huh/Panel-4-image 2-MB-UN-circle.jpg" alt="">
-        </div>
+  
+  <div class="heading-container">
+    <h1 class="heading">Peace Proposal</h1>
+  </div>
+  
+  <div class="card-container">
+    <div class="peace description-card">
+      <div class="card-content description">
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+           at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
+           as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+           web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+      </div>
     </div>
-</div>
+    <div class="peace image-card">
+      <img src="huh/Panel-4-image 2-2024 PP Cover.png" alt="" class="card-image">
+    </div>
+    <div class="peace centered-image-card">
+      <div class="card-content center-image">
+        <img src="huh/Panel-4-image 2-MB-UN-circle.jpg" alt="" class="centered-image">
+      </div>
+    </div>
+  </div>
+  
+  <div class="read-more-container">
+    <a href="your-shop-link.html" class="read-more-button">Read more</a>
+  </div>
+  
+  
+  
 
        
 <div class="news-container-wrapper">
@@ -274,28 +298,29 @@
   </div>
 
   <!-- Images Section -->
-  <div class="images-section">
-    <h2 class="section-heading">Images</h2>
-    <div class="thumbnail-carousel">
-      <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-      <div class="thumbnail-container">
-        <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
-        <div class="thumbnail"><img src="huh/coronation2.jpg" alt=""></div>
-        <div class="thumbnail"><img src="huh/coronation1.jpeg" alt=""></div>
-        <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
-        <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
-        <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
-      </div>
-      <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+<div class="images-section">
+  <h2 class="section-heading">Images</h2>
+  <div class="thumbnail-carousel">
+    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    <div class="thumbnail-container">
+      <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
+      <div class="thumbnail"><img src="huh/coronation2.jpg" alt=""></div>
+      <div class="thumbnail"><img src="huh/coronation1.jpeg" alt=""></div>
+      <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
+      <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
+      <div class="thumbnail"><img src="huh/Panel-9-image 1-MB Gray suit profile.jpg" alt=""></div>
     </div>
-    <div class="pagination">
-      <button class="pagination-button" onclick="goToSlide(0)">1</button>
-      <button class="pagination-button" onclick="goToSlide(1)">2</button>
-      <button class="pagination-button" onclick="goToSlide(2)">3</button>
-      <button class="pagination-button" onclick="goToSlide(3)">4</button>
-      <button class="pagination-button" onclick="goToSlide(4)">5</button>
-      <button class="pagination-button" onclick="goToSlide(5)">6</button>
-    </div>
+    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <!-- Pagination Dots -->
+  <div class="pagination">
+    <span class="pagination-dot" onclick="goToSlide(0)"></span>
+    <span class="pagination-dot" onclick="goToSlide(1)"></span>
+    <span class="pagination-dot" onclick="goToSlide(2)"></span>
+    <span class="pagination-dot" onclick="goToSlide(3)"></span>
+    <span class="pagination-dot" onclick="goToSlide(4)"></span>
+    <span class="pagination-dot" onclick="goToSlide(5)"></span>
   </div>
 </div>
 
